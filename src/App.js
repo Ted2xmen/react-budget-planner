@@ -17,10 +17,10 @@ function App() {
          <Budget /> 
        </div>
        <div className="col-sm">
-         <Remaining /> 
+        <ExpenseTotal />
        </div>
        <div className="col-sm">
-         <ExpenseTotal /> 
+        <Remaining />  
        </div>
      </div>
      <h3 className='mt-3'>Expenses</h3>
