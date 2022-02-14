@@ -5,7 +5,7 @@ html,
 .container,
 #root {
   background-color: white;
-  color: wheat;
+  color: rgb(46, 35, 15);
   font-size: 1rem;
   font-family: "Lato", sans-serif;
 }
@@ -14,17 +14,15 @@ html,
 h2,
 h3 {
   font-family: "Anton", sans-serif;
-  color: saddlebrown;
+  color: rgb(22, 11, 3);
 }
 
 .hover {
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
-    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   transition: 0.3s;
 }
 
 .hover:hover {
-  transform: scale(1.09);
+  transform: scale(1.05);
   transition: 0.3s;
 }
 

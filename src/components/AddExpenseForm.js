@@ -24,9 +24,9 @@ function AddExpenseForm() {
 
   return (
     <form onSubmit={onSubmit}>
-      <div className="row mt-3">
+      <div className="row mt-3 mb-5 pb-5">
         <div className="col-sm">
-          <label htmlFor="name">Name </label>
+          <label htmlFor="name">Harcaman </label>
           <input
             type="text"
             required="required"
@@ -36,7 +36,7 @@ function AddExpenseForm() {
           />
         </div>
         <div className="col-sm">
-          <label htmlFor="cost">Cost Value </label>
+          <label htmlFor="cost">Tutar:  </label>
           <input
             type="text"
             required="required"
@@ -45,9 +45,9 @@ function AddExpenseForm() {
             onChange={(event) => setCost(event.target.value)}
           />
         </div>
-        <div className="col-sm gap-3 mt-3 d-flex justify-content-start align-items-end">
-          <button type="submit" className="btn btn-primary px-5">
-            Save
+        <div className="col-sm gap-3  d-flex justify-content-start align-items-end">
+          <button type="submit" className="btn btn-dark px-5">
+            kaydet
           </button>
         </div>
       </div>

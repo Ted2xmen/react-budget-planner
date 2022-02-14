@@ -7,7 +7,7 @@ function Budget() {
   const {budget } = useContext(AppContext);
 
   return (
-    <div className='py-5 hover alert alert-secondary'>
+    <div className='py-5 hover alert alert-success'>
      
      <img src={vault} height="100" alt="" />
       Bütçen:  {budget} TL </div>

@@ -9,15 +9,14 @@ import AddExpenseForm from "./components/AddExpenseForm";
 import Header from "./components/Header"
 import { AppProvider } from "./context/AppContext";
 import online from './images/online.svg'
+import Footer from "./components/Footer";
 
 function App() {
   const [showing, setShowing] = useState(true);
 
   return (
     <AppProvider>
-      <nav className="navbar navbar-light bg-light">
-        <span className="navbar-brand mb-0 h1">Navbar</span>
-      </nav>
+
       <div className="container p-5">
       <Header />
       </div>
@@ -34,20 +33,21 @@ function App() {
           </div>
         </div>
         <div className="row mt-5">
-          <div className="col-sm-4">
+          <div className="col-sm-4 my-5 py-3">
           <img src={online} width="350" className="p-4" alt="" />
+          
           </div>
           <div className="col-sm-8">
             <ExpenseList />
           </div>
         </div>
-        <h3 className="mt-5 text-center">Add Expenses</h3>
-        <div className="row mt-4">
+        <h3 className="mt-2 text-center gradient">Harcama Ekle</h3>
+        <div className="row mt-4 mb-5 pb-5">
           <button
             onClick={() => {
               setShowing(!showing);
             }}
-            className="btn btn-primary"
+            className="btn btn-dark"
           >
             {showing ? "Formu Gizle" : "Formu Göster"}
           </button>
@@ -59,6 +59,9 @@ function App() {
             <div></div>
           )}
         </div>
+        <footer className="row my-3 py-3 text-center">
+          <Footer />
+        </footer>
       </div>
     </AppProvider>
   );

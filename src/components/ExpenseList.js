@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ExpenseItem from "./ExpenseItem";
 import { AppContext } from "../context/AppContext";
+import happy from "../images/happy.svg";
 
 
 function ExpenseList() {
@@ -22,7 +23,10 @@ function ExpenseList() {
  
   
       {expenses.length <= 0 ? (
-        <div className="alert alert-danger">Hiç harcaman yok</div>
+        
+        <div className="d-flex justify-content-center">
+         <img src={happy} width="400" className="p-4 " alt="" />
+         </div>
       ) : (
         <ul className="list-group">
           {expenses &&

@@ -23,11 +23,12 @@ const AppReducer = (state, action) => {
 }
 
 const initalState = {
-    budget: 1000,
+    budget: 5000,
     expenses: [
-        { id: 12, name: 'shopping', cost: 100},
-        { id: 23, name: 'udemy', cost: 200},
-        { id: 53, name: 'spotify', cost: 300},
+        { id: 12, name: 'market', cost: 200},
+        { id: 23, name: 'faturalar', cost: 520},
+        { id: 232, name: 'aidat', cost: 120},
+        { id: 53, name: 'sinema & kitap & yemek', cost: 315},
     ]
 }
 
