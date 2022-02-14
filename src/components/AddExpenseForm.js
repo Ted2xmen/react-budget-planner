@@ -1,30 +1,26 @@
-import { useContext , useState} from "react";
-import {AppContext} from '../context/AppContext';
-import {v4 as uuidv4} from 'uuid';
+import { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
+import { v4 as uuidv4 } from "uuid";
 
 function AddExpenseForm() {
   const { dispatch } = useContext(AppContext);
-  const [name, setName] = useState('');
-  const [cost, setCost] = useState('');
+  const [name, setName] = useState("");
+  const [cost, setCost] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
-    // alert('name: ' + name + 'cost: ' + cost);
 
     const expense = {
       id: uuidv4(),
       name: name,
       cost: parseInt(cost),
-    }
+    };
 
     dispatch({
-      type: 'ADD_EXPENSE',
+      type: "ADD_EXPENSE",
       payload: expense,
-    })
-    
-    
-
-  }
+    });
+  };
 
   return (
     <form onSubmit={onSubmit}>
@@ -36,7 +32,7 @@ function AddExpenseForm() {
             required="required"
             id="name"
             className="form-control"
-            onChange={(event) => setName(event.target.value) }
+            onChange={(event) => setName(event.target.value)}
           />
         </div>
         <div className="col-sm">
