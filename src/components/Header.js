@@ -8,7 +8,11 @@ function Header() {
        <span className='header-text gradient'>BUDGET PLANNER</span>
      </div>
      <div className="col-sm-2 mt-5 ">
-       span
+       todo:
+     <br/>
+       dark mode <br/>
+       localstorage <br/>
+       
 
 
     
