@@ -8,6 +8,7 @@ import ExpenseList from "./components/ExpenseList";
 import AddExpenseForm from "./components/AddExpenseForm";
 import Header from "./components/Header"
 import { AppProvider } from "./context/AppContext";
+import online from './images/online.svg'
 
 function App() {
   const [showing, setShowing] = useState(true);
@@ -20,9 +21,7 @@ function App() {
       <div className="container p-5">
       <Header />
       </div>
-  
       <div className="container">
-        <h1 className="mt-3">Budget Planner</h1>
         <div className="row mt-3">
           <div className="col-sm">
             <Budget />
@@ -34,9 +33,11 @@ function App() {
             <Remaining />
           </div>
         </div>
-        <h3 className="mt-3">Expenses {showing} </h3>
-        <div className="row mt-3">
-          <div className="col-sm">
+        <div className="row mt-5">
+          <div className="col-sm-4">
+          <img src={online} width="350" className="p-4" alt="" />
+          </div>
+          <div className="col-sm-8">
             <ExpenseList />
           </div>
         </div>

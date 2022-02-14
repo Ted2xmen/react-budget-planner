@@ -15,15 +15,14 @@ function ExpenseItem(props) {
 
   return (
     <div>
-      <li className="list-group-item d-flex justify-content-between align-items-center m-2">
+      <li className="rounded-3 list-group-item d-flex justify-content-between align-items-center m-2 glass">
         <div className="">
-          {props.name} <br />
-          <p>{props.date}</p>
+          {props.name} 
         </div>
 
         <div>
           <span className="mx-4 badge text-dark bg-info  ">{props.cost} TL</span>
-          <TiDelete size="2em" onClick={handleDeleteExpense}></TiDelete>
+          <TiDelete className="click" size="2.4em" onClick={handleDeleteExpense}></TiDelete>
         </div>
       </li>
     </div>

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import ExpenseItem from "./ExpenseItem";
 import { AppContext } from "../context/AppContext";
 
+
 function ExpenseList() {
   const { expenses } = useContext(AppContext);
 
@@ -14,7 +15,12 @@ function ExpenseList() {
   //   ];
 
   return (
-    <div>
+ 
+      
+      <div>
+        
+ 
+  
       {expenses.length <= 0 ? (
         <div className="alert alert-danger">Hiç harcaman yok</div>
       ) : (

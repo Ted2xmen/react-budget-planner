@@ -1,5 +1,6 @@
 import {useContext} from 'react';
 import {AppContext} from '../context/AppContext';
+import wallet from '../images/wallet.svg';
 
 
 function ExpenseTotal() {
@@ -10,10 +11,12 @@ function ExpenseTotal() {
     return (total += item.cost);
   }, 0);
 
-  const alertType = totalExpenses >= budget ? 'alert-info' : 'alert-success';
+  const alertType = totalExpenses >= budget ? 'alert-danger' : 'alert-info';
 
   return (
-    <div className={`alert ${alertType}`}> {totalExpenses} lira harcadın </div>
+    <div className={`alert ${alertType} py-5 hover`}> 
+    <img src={wallet} height="100" alt="" />
+    {totalExpenses} lira harcadın </div>
 
   )
 }

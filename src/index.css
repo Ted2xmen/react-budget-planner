@@ -1,4 +1,49 @@
-html, .container, #root {
-    background-color: black;
-    color: wheat;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300&family=Viga&display=swap');
+
+html,
+.container,
+#root {
+  background-color: white;
+  color: wheat;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+  color: saddlebrown;
+}
+
+.hover {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  transition: 0.3s;
+}
+
+.hover:hover {
+  transform: scale(1.09);
+  transition: 0.3s;
+}
+
+.gradient {
+  
+  background: #3b3030; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #866565, #8226b1); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #691a1a, #0c8696); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}
+
+.header-text {
+    font-family: 'Viga', sans-serif;
+    font-size: 4rem;
+}
+
+.click {
+    cursor: pointer;
 }
