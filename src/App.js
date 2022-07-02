@@ -10,15 +10,16 @@ import Header from "./components/Header"
 import { AppProvider } from "./context/AppContext";
 import online from './images/online.svg'
 import Footer from "./components/Footer";
+import Charts from "./components/Charts";
+import AnotherCharts from "./components/AnotherCharts";
 
 function App() {
   const [showing, setShowing] = useState(true);
 
   return (
     <AppProvider>
-
       <div className="container p-5">
-      <Header />
+        <Header />
       </div>
       <div className="container">
         <div className="row mt-3">
@@ -32,17 +33,7 @@ function App() {
             <Remaining />
           </div>
         </div>
-        <div className="row mt-5">
-          <div className="col-sm-4 my-5 py-3">
-          <img src={online} width="350" className="p-4" alt="" />
-          
-          </div>
-          <div className="col-sm-8">
-            <ExpenseList />
-          </div>
-        </div>
-        <h3 className="mt-2 text-center gradient">Harcama Ekle</h3>
-        <div className="row mt-4 mb-5 pb-5">
+        <div className="row mt-4">
           <button
             onClick={() => {
               setShowing(!showing);
@@ -58,6 +49,16 @@ function App() {
           ) : (
             <div></div>
           )}
+        </div>
+        <div className="row mt-5">
+          <div className="col-sm-4">
+            <AnotherCharts />
+            {/* <Charts /> */}
+            {/* <img src={online} width="350" className="p-4" alt="" /> */}
+          </div>
+          <div className="col-sm-8">
+            <ExpenseList />
+          </div>
         </div>
         <footer className="row my-3 py-3 text-center">
           <Footer />

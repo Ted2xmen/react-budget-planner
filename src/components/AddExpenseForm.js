@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { v4 as uuidv4 } from "uuid";
 
@@ -22,9 +22,18 @@ function AddExpenseForm() {
     });
   };
 
+  
+  useEffect(() => {
+    if (name[0] === "-") {
+      name.split(",") ;
+    } else if (name[0] === "+") {
+      return alert("+");
+    }
+  }, [name]);
+
   return (
     <form onSubmit={onSubmit}>
-      <div className="row mt-3 mb-5 pb-5">
+      <div className="row mt-3 mb-5 pb-5 d-flex d-flex justify-content-center">
         <div className="col-sm">
           <label htmlFor="name">Harcaman </label>
           <input
@@ -36,7 +45,7 @@ function AddExpenseForm() {
           />
         </div>
         <div className="col-sm">
-          <label htmlFor="cost">Tutar:  </label>
+          <label htmlFor="cost">Tutar: </label>
           <input
             type="text"
             required="required"
@@ -47,7 +56,7 @@ function AddExpenseForm() {
         </div>
         <div className="col-sm gap-3  d-flex justify-content-start align-items-end">
           <button type="submit" className="btn btn-dark px-5">
-            kaydet
+            Ekle
           </button>
         </div>
       </div>
