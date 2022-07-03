@@ -5,7 +5,7 @@ import wallet from '../images/wallet.svg';
 
 function ExpenseTotal() {
 
-  const {expenses, budget} = useContext(AppContext);
+  const {expenses, currency, budget} = useContext(AppContext);
 
   const totalExpenses = expenses.reduce((total, item)=> {
     return (total += item.cost);
@@ -16,7 +16,7 @@ function ExpenseTotal() {
   return (
     <div className={`alert ${alertType} py-5 hover`}> 
     <img src={wallet} height="100" alt="" />
-    {totalExpenses} lira harcadın </div>
+    {totalExpenses} {currency} harcadın </div>
 
   )
 }

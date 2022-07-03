@@ -1,10 +1,10 @@
 import {useContext} from "react";
-import { TiDelete } from "react-icons/ti";
+import { FcFullTrash, FcDataConfiguration } from "react-icons/fc";
 import { AppContext } from "../context/AppContext";
 
 function ExpenseItem(props) {
 
-    const {dispatch} = useContext(AppContext);
+    const {dispatch, currency} = useContext(AppContext);
     
     const handleDeleteExpense = () => {
       dispatch({
@@ -16,13 +16,22 @@ function ExpenseItem(props) {
   return (
     <div>
       <li className="rounded-3 list-group-item d-flex justify-content-between align-items-center my-1 hover glass">
-        <div className="fs-5 fw-bold">
-          {props.name} 
-        </div>
+        <div className="fs-5 fw-bold">{props.name}</div>
 
         <div>
-          <span className="mx-4 badge text-light bg-success fs-6  ">{props.cost} TL</span>
-          <TiDelete className="click text-danger" size="2.4em" onClick={handleDeleteExpense}></TiDelete>
+          <span className="mx-4 badge text-light bg-success fs-6  ">
+            {props.cost} {currency}
+          </span>
+          <FcDataConfiguration
+            className="click text-danger"
+            size="2.4em"
+            onClick={handleDeleteExpense}
+          ></FcDataConfiguration>
+          <FcFullTrash
+            className="click text-danger mx-1"
+            size="2.4em"
+            onClick={handleDeleteExpense}
+          ></FcFullTrash>
         </div>
       </li>
     </div>

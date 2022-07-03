@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Chart } from "react-google-charts";
-
 import { AppContext } from "../context/AppContext";
 
 const AnotherCharts = () => {

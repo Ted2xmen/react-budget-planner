@@ -10,11 +10,10 @@ import Header from "./components/Header"
 import { AppProvider } from "./context/AppContext";
 import online from './images/online.svg'
 import Footer from "./components/Footer";
-import Charts from "./components/Charts";
 import AnotherCharts from "./components/AnotherCharts";
 
 function App() {
-  const [showing, setShowing] = useState(true);
+  const [showing, setShowing] = useState(false);
 
   return (
     <AppProvider>
